@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hostel Reservation</title>
+  <! accessing style.css file>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>Welcome to the Hostel Reservation Application!</h1>
+  <form action="/reserve" method="post">
+<! Add input fields for the reservation details >
+<label for="StudentName">Student Name</label>
+<input type="text" name="StudentName"  placeholder="Enter your name" required><br>
+<label for="FatherName" >Father Name</label>
+<input type="text" name="FatherName" placeholder="Enter Father Name" required><br>
+<label for="phoneNumber" >phoneNumber</label>
+<input type="text" name="phoneNumber" placeholder="PhoneNumber" required><br>
+<label for="email" >Email</label>
+<input type="text" name="email" placeholder="Email" required><br>
+<label for="Year" >Year</label>
+<input type="text" name="year" placeholder="Year" required><br>
+<label for="Branch" >Branch</label>
+<input type="text" name="Branch" placeholder="Branch" required><br>
+<label for="Category" >Category</label>
+<input type="text" name="Category" placeholder="Category" required><br>
+<label for="MeritScore" >MeritScore</label>
+<input type="number" name="MeritScore"  placeholder="Score" required><br>
+
+<! ... >
+<! creating submit button to submit the data>
+<button type="submit">Submit</button>
+  </form>
+  
+</body>
+</html>

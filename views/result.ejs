@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservation Result</title>
+ 
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  
+  <div class="form-card">
+    <p>Reservation Result</p>
+
+    <div class="input-container">
+      <label for="studentName"><strong>Student Name</strong></label>
+      <input type="text" id="studentName" value="<%= reservation.StudentName %>" readonly>
+    </div>
+
+    <div class="input-container">
+      <label for="appStatus"><strong>Application Status</strong></label>
+      <input type="text" id="appStatus" value="<%= reservation.Appstatus %>" readonly>
+    </div>
+ 
+  </div>
+</body> 
+</html>
