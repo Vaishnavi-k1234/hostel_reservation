@@ -3,7 +3,7 @@ pipeline {
  
     environment {
         NODEJS_VERSION = '20.11.0'  
-        MONGODB_URL = 'mongodb://localhost:27017/testDB'  
+        MONGODB_URL = 'mongodb://localhost:27017/hostel_reservation'  
     }
  
     stages {
