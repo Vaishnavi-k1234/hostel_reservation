@@ -60,7 +60,7 @@ app.post('/reserve', async (req, res) => {
     reservation.Appstatus = 'Seat Not Allocated';
   }
   await reservation.save();
-
+  console.log(reservation)
   res.render('result', { reservation });
 });
 //This starts the server on the specified port and logs a message to the console when the server is running.

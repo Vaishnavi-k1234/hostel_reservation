@@ -1,18 +1,15 @@
 pipeline {
     agent any
- 
     environment {
         NODEJS_VERSION = '20.11.0'  
         MONGODB_URL = 'mongodb://localhost:27017/hostel_reservation'  
     }
- 
     stages {
         stage('Checkout') {
             steps {
                 checkout scm
             }
         }
- 
         stage('Install Dependencies') {
             steps {
                 script {
@@ -24,7 +21,6 @@ pipeline {
                 }
             }
         }
- 
         stage('Run Tests') {
             steps {
                 script {
@@ -32,7 +28,6 @@ pipeline {
                 }
             }
         }
- 
         stage('Build and Deploy') {
             steps {
                 script {
