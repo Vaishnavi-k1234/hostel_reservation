@@ -11,27 +11,53 @@
   <h1>Welcome to the Hostel Reservation Application!</h1>
   <form action="/reserve" method="post">
 <! Add input fields for the reservation details >
-<label for="StudentName">Student Name</label>
+<b><label for="StudentName">Student Name</label></b>
 <input type="text" name="StudentName"  placeholder="Enter your name" required><br>
-<label for="FatherName" >Father Name</label>
+<b><label for="FatherName" >Father Name</label>
 <input type="text" name="FatherName" placeholder="Enter Father Name" required><br>
-<label for="phoneNumber" >phoneNumber</label>
+<b><label for="phoneNumber" >phoneNumber</label>
 <input type="text" name="phoneNumber" placeholder="PhoneNumber" required><br>
-<label for="email" >Email</label>
+<b><label for="email" >Email</label>
 <input type="text" name="email" placeholder="Email" required><br>
-<label for="Year" >Year</label>
+<b></b><label for="Year" >Year</label>
 <input type="text" name="year" placeholder="Year" required><br>
-<label for="Branch" >Branch</label>
+<b></b><label for="Branch" >Branch</label>
 <input type="text" name="Branch" placeholder="Branch" required><br>
-<label for="Category" >Category</label>
+<b></b><label for="Category" >Category</label>
 <input type="text" name="Category" placeholder="Category" required><br>
-<label for="MeritScore" >MeritScore</label>
+<b></b><label for="MeritScore" >MeritScore</label>
 <input type="number" name="MeritScore"  placeholder="Score" required><br>
 
 <! ... >
 <! creating submit button to submit the data>
 <button type="submit">Submit</button>
   </form>
+
+  <script>
+    function validateForm() {
+      var phoneNumberInput = document.getElementsByName("phoneNumber")[0];
+      if (!/^\d{10}$/.test(phoneNumberInput.value)) {
+        alert("Phone number must be 10 digits.");
+        return false;
+      }
+      
+      var yearInput = document.getElementsByName("year")[0];
+      if (yearInput.value < 1 || yearInput.value > 4) {
+        alert("Year must be between 1 and 4.");
+        return false;
+      }
+      
+      var meritScoreInput = document.getElementsByName("MeritScore")[0];
+      if (meritScoreInput.value < 0 || meritScoreInput.value > 100) {
+        alert("Merit Score must be between 0 and 100.");
+        return false;
+      }
+      
+      // You can add more validations for other fields here
+      
+      return true;
+    }
+  </script>
   
 </body>
 </html>

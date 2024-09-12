@@ -17,7 +17,7 @@ spec:
      containers:
       - name: docker-nodejs
         image: vaish1234/hostel-reservation-nodejs
-        ports:
+        ports:n
         - containerPort: 3000
 ---
 apiVersion: v1
