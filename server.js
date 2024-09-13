@@ -3,9 +3,17 @@ const express = require('express');//express is used to create web server
 const readline = require('readline');//readline 
 const mongoose = require('mongoose');//used to connect with MongoDB
 const app = express();
-const MongoDBURI=process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/hostel';
+const MongoDBURI=process.env.MONGO_URI || mongodb+srv://keshavapatnamvaishnavi2002:<BvODxSQWP6Q3ivu3>@cluster0.8cawc.mongodb.net/hostel?retryWrites=true&w=majority&appName=Cluster0
+//'mongodb://127.0.0.1:27017/hostel';
 //.connect connects to the MongoDB database hostel running on the localhost.
-mongoose.connect(MongoDBURI);
+mongoose.connect(MongoDBURI, 
+  {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+
+.then(() => console.log('MongoDB connected'))
+.catch((err) => console.error('MongoDB connection error:', err));
 //defines the schema for the Reservation model
 const reservationSchema = new mongoose.Schema({
   StudentName: String,
